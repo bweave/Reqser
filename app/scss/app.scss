@@ -1,0 +1,45 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  overflow-x: scroll;
+  padding-top: 60px;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+.reqs {
+    position: relative;
+    width: 35rem;
+    height: 40rem;
+    overflow-y: scroll;
+    padding: 1rem 1.25rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    .req {
+        display: block;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        color: #444;
+        text-decoration: none;
+        &:hover { cursor: pointer }
+    }
+
+    .req-inner {
+        @extend .clearfix;
+    }
+}

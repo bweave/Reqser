@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gulp-webserver": "~0.4.0",
+    "gulp": "~3.8.6",
+    "gulp-notify": "~1.4.0",
+    "gulp-sass": "~0.7.2"
+  }
+}

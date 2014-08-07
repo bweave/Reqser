@@ -1,0 +1,21 @@
+<div class="page-header">
+    <h2>Chat</h2>
+</div>
+
+<form role="form">
+    <div class="form-group">
+        <input class="form-control" placeholder="Message..." ng-model="newMessage">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit" ng-click="addMessage()">Send</button>
+    </div>
+</form>
+
+<ul id="messages" ng-show="messages">
+    <li ng-repeat="message in messages | orderByPriority | reverse">{{message.text}}</li>
+</ul>
+
+<p>
+    Running the 'interpolate' filter:
+    {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>

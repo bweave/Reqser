@@ -1,0 +1,27 @@
+<div class="page-header">
+    <h2>Reqs</h2>
+</div>
+
+<div class="reqs">
+    <ul class="list-unstyled" ng-show="reqs" ui-sortable>
+        <li ng-repeat="req in reqs | orderByPriority | reverse">
+            <a shref="req-detail" class="req">
+                <div class="req-inner">
+                    <h4 class="req-text">{{req.title}}</h4>
+                    <button ng-click="delReq(req.$id)" class="btn btn-danger btn-xs pull-right">X</button>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <form role="form">
+        <div class="form-group">
+            <textarea class="form-control" placeholder="New Req... hit enter to add." ng-model="newReq" ng-enter="addReq()"></textarea>
+        </div>
+    </form>
+</div>
+
+<p>
+    Running the 'interpolate' filter:
+    {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
